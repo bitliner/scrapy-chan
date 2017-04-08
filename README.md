@@ -13,12 +13,12 @@ They can be combined together to easily build and execute effective scraping.
 # Usage
 
 ```
-let ScrapyChan=require('scrapy-chan');
+let SC = require('scrapy-chan');
 
-ScrapyChan.Url('news.ycombinator.com')
-  .pipe(ScrapyChan.ScrapeSinglePageWithoutAjax())
-  .pipe(ScrapyChan.Parse())
-  .pipe(ScrapyChan.Print())
+SC.Url('news.ycombinator.com')
+  .pipe(SC.ScrapeSinglePageWithoutAjax())
+  .pipe(SC.Parse())
+  .pipe(SC.Print())
   .on('end', ()=>{
     // end  
   })
