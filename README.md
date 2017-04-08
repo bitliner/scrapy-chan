@@ -2,7 +2,7 @@
 
 Scraping made easy.
 
-Scraps offers multiple modular utilities for scraping. 
+`scrapy-chan` offers multiple modular utilities for scraping. 
 
 They can be combined together to easily build and execute effective scraping.
 
