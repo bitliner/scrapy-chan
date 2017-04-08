@@ -13,12 +13,7 @@ TBD
 # Usage
 
 ```
-pipe=[
-  new Url(),
-  ,
-  ,
-  new Print()
-];
+
 
 new Url('news.ycombinator.com')
   .pipe(new ScrapeSinglePage())
