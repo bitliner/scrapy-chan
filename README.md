@@ -16,7 +16,7 @@ TBD
 
 
 new Url('news.ycombinator.com')
-  .pipe(new ScrapeSinglePage())
+  .pipe(new ScrapeSinglePageWithoutAjax())
   .pipe(new Parse())
   .pipe(new Print())
   .on('end', ()=>{
@@ -26,3 +26,7 @@ new Url('news.ycombinator.com')
     // err
   });
 ```
+
+# Utilities
+
+TBD
