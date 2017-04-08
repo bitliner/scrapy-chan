@@ -16,9 +16,9 @@ They can be combined together to easily build and execute effective scraping.
 let SC = require('scrapy-chan');
 
 SC.Url('news.ycombinator.com')
-  .pipe(SC.ScrapeSinglePageWithoutAjax())
-  .pipe(SC.Parse())
-  .pipe(SC.Print())
+  .pipe( SC.ScrapeSinglePageWithoutAjax() )
+  .pipe( SC.Parse() )
+  .pipe( SC.Print() )
   .on('end', ()=>{
     // end  
   })
