@@ -1,0 +1,26 @@
+{
+  "name": "scraps",
+  "version": "1.0.0",
+  "description": "Scraping made easy.",
+  "main": "scraps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitliner/scraps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitliner/scraps/issues"
+  },
+  "homepage": "https://github.com/bitliner/scraps#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "emojic": "^1.1.9",
+    "pino": "^4.2.4",
+    "request": "^2.81.0",
+    "through2": "^2.0.3"
+  }
+}
