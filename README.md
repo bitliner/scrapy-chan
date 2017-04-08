@@ -13,7 +13,7 @@ They can be combined together to easily build and execute effective scraping.
 # Usage
 
 ```
-let SC=require('scrapy-chan');
+let SC = require('scrapy-chan');
 
 SC.Url('news.ycombinator.com')
   .pipe(SC.ScrapeSinglePageWithoutAjax())
