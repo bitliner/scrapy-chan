@@ -12,11 +12,29 @@ They can be combined together to easily build and execute effective scraping.
 
 # Usage
 
+**Single process**
+
 ```
 let SC = require('scrapy-chan');
 
 SC.Url('news.ycombinator.com')
   .pipe( SC.ScrapeSinglePageWithoutAjax() )
+  .pipe( SC.Parse() )
+  .pipe( SC.Print() )
+  .on('end', ()=>{
+    // end  
+  })
+  .on('error', (err)=>{
+    // err
+  });
+```
+
+**Distributed**
+```
+let SC = require('scrapy-chan');
+
+SC.Url('news.ycombinator.com')
+  .pipe( SC.ScrapeSinglePageDistributely() ) // send url and receives Html
   .pipe( SC.Parse() )
   .pipe( SC.Print() )
   .on('end', ()=>{
