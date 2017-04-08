@@ -7,3 +7,5 @@ module.exports.ScrapeSinglePageWithoutAjax = require('./lib/ScrapeSinglePageWith
 module.exports.ParseHackerNewsExample = require('./lib/ParseHackerNewsExample');
 
 module.exports.Print = require('./lib/Print');
+
+module.exports._stream = require('./lib/utils/stream');
