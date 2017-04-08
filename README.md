@@ -14,13 +14,16 @@ TBD
 
 ```
 pipe=[
-  new Url('news.ycombinator.com'),
-  new ScrapeSinglePage(),
-  new Parse(),
+  new Url(),
+  ,
+  ,
   new Print()
 ];
 
-Scraps(pipe)
+new Url('news.ycombinator.com')
+  .pipe(new ScrapeSinglePage())
+  .pipe(new Parse())
+  .pipe(new Print())
   .on('end', ()=>{
     // end  
   })
