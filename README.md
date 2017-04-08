@@ -1,4 +1,4 @@
-# scraps
+# scrapy-chan
 
 Scraping made easy.
 
@@ -8,17 +8,17 @@ They can be combined together to easily build and execute effective scraping.
 
 # Installation
 
-TBD
+`npm i --save scrapy-chan`
 
 # Usage
 
 ```
+let ScrapyChan=require('scrapy-chan');
 
-
-new Url('news.ycombinator.com')
-  .pipe(new ScrapeSinglePageWithoutAjax())
-  .pipe(new Parse())
-  .pipe(new Print())
+ScrapyChan.Url('news.ycombinator.com')
+  .pipe(ScrapyChan.ScrapeSinglePageWithoutAjax())
+  .pipe(ScrapyChan.Parse())
+  .pipe(ScrapyChan.Print())
   .on('end', ()=>{
     // end  
   })
