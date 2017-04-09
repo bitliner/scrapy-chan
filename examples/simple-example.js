@@ -1,7 +1,7 @@
 let Scraps = require('../');
 
 Scraps.Url('news.ycombinator.com')
-  .pipe(Scraps.ScrapeSinglePageWithoutAjax())
+  .pipe(Scraps.DownloadPageWithoutJs())
   .pipe(Scraps.ParseHackerNewsExample())
   .pipe(Scraps.Print())
   .on('finish', () => {
