@@ -2,14 +2,14 @@
 
 Scraping made easy.
 
-`scrapy-chan` offers multiple modular utilities for scraping. 
+`scrapy-chan` offers highly modular `utilities` for doing scraping. 
 
-They can be combined together to easily build and execute effective scraping.
+They can be easily combined together to build and execute effective scraping.
 
 # Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [Utilities](#utilities)
+3. [List of Utilities](#list-of-utilities)
 
 
 # Installation
@@ -52,7 +52,8 @@ SC('news.ycombinator.com')
   });
 ```
 
-# Utilities
+<a name="list-of-utilities">
+# List of Utilities
 
 Each utility is a stream.
 
