@@ -26,9 +26,9 @@ They can be easily combined together to build and execute effective scraping.
 let SC = require('scrapy-chan');
 
 SC('news.ycombinator.com')
-  .pipe(SC.DownloadPageWithoutJs())
-  .pipe(SC.ParseHackerNewsExample())
-  .pipe(SC.Print())
+  .pipe( SC.DownloadPageWithoutJs() )
+  .pipe( SC.ParseHackerNewsExample() )
+  .pipe( SC.PrintHackerNewsExample() )
   .on('finish', () => {
     console.log('End or scraping!');
   // end  
@@ -45,7 +45,7 @@ let SC = require('scrapy-chan');
 SC('news.ycombinator.com')
   .pipe( SC.ScrapeSinglePageDistributely() ) // send url and receives Html
   .pipe( SC.Parse() )
-  .pipe( SC.Print() )
+  .pipe( SC.PrintHackerNewsExample() )
   .on('end', ()=>{
     // end  
   })
