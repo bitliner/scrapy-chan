@@ -62,31 +62,56 @@ Each utility is a stream.
 
 ## DownloadPageWithoutJs
 
+It executes a GET request to download the Html content identified by an URL. 
+
 **Stream Input**
-
-`conf: any` - a string representing an URL - e.g. "http://news.ycombinator.com"
-
-**Stream Output**
 
 `url: String` - a string representing an URL - e.g. "http://news.ycombinator.com"
 
+**Stream Output**
+
+`html: String` - a string representing the html code for an input URL - e.g. "http://news.ycombinator.com"
+
+**Example**
 
 ```
-SC.Url('news.ycombinator.com')
+SC('news.ycombinator.com')
   .pipe( SC.DownloadPageWithoutJs() )
-  .pipe( // this stream will )
+  .pipe( // this stream will receive the html content of 'news.ycombinator.com' )
 ```
 
 ## ParseHackerNewsExample
+
+It parses news (*title* and *link*) from HackerNews.
 
 **Stream Input**
 
 `html: String` - a string representing an html page
 
+**Stream Output**
+
+`objects: Array[]` - Array of parsed elements
+
+**Example**
+
+```
+SC('news.ycombinator.com')
+  .pipe( SC.DownloadPageWithoutJs() )
+  .pipe( SC.ParseHackerNewsExample )
+  .pipe( // this stream will receive a set of objects from SC.ParseHackerNewsExample )
+```
+
+
 ---
 
-## PrintExample
+## PrintHackerNewsExample
+
+It prints to the console news (*title* and *link*) from HackerNews.
 
 **Stream Input**
 
 `Array` - an array of objects, where each object have a *title* and *link* fields
+
+**Stream Output**
+
+`Array` - the same Array received as input
