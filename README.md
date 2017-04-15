@@ -108,6 +108,5 @@ SC('news.ycombinator.com')
 
 It prints to the console news (*title* and *link*) from HackerNews.
 
-**Stream Input**: `Array` - an array of objects, where each object have a *title* and *link* fields
-
-**Stream Output**: `Array` - the same Array received as input
+* **Stream Input**: `Array` - an array of objects, where each object have a *title* and *link* fields
+* **Stream Output**: `Array` - the same Array received as input
