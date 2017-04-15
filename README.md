@@ -49,6 +49,8 @@ SC.Url('news.ycombinator.com')
 
 * [`Url`](#Url)
 * [`DownloadPageWithoutJs`](#DownloadPageWithoutJs)
+* [`ParseHackerNewsExample`](#ParseHackerNewsExample)
+* [`PrintExample`](#PrintExample)
 
 ## Url
 
@@ -61,3 +63,15 @@ SC.Url('news.ycombinator.com')
 **Input**
 
 * `conf` - a string representing an URL - e.g. "http://news.ycombinator.com"
+
+## ParseHackerNewsExample
+
+**Input**
+
+* `html` - a string representing an html page
+
+## PrintExample
+
+**Input**
+
+* `objects` - an array of objects, where each object have a *title* and *link* fields
