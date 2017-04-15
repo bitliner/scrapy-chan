@@ -64,13 +64,8 @@ Each utility is a stream.
 
 It executes a GET request to download the Html content identified by an URL. 
 
-**Stream Input**
-
-`url: String` - a string representing an URL - e.g. "http://news.ycombinator.com"
-
-**Stream Output**
-
-`html: String` - a string representing the html code for an input URL - e.g. "http://news.ycombinator.com"
+* **Stream Input**: `url: String` - a string representing an URL - e.g. "http://news.ycombinator.com"
+* **Stream Output**: `html: String` - a string representing the html code for an input URL - e.g. "http://news.ycombinator.com"
 
 **Example**
 
@@ -84,13 +79,8 @@ SC('news.ycombinator.com')
 
 It parses news (*title* and *link*) from HackerNews.
 
-**Stream Input**
-
-`html: String` - a string representing an html page
-
-**Stream Output**
-
-`objects: Array[]` - Array of parsed elements
+* **Stream Input**: `html: String` - a string representing an html page
+* **Stream Output**: `objects: Array[]` - Array of parsed elements
 
 **Example**
 
