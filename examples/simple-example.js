@@ -1,9 +1,10 @@
-let Scraps = require('../');
+let SC = require('../');
 
-Scraps.Url('news.ycombinator.com')
-  .pipe(Scraps.DownloadPageWithoutJs())
-  .pipe(Scraps.ParseHackerNewsExample())
-  .pipe(Scraps.Print())
+
+SC('news.ycombinator.com')
+  .pipe(SC.DownloadPageWithoutJs())
+  .pipe(SC.ParseHackerNewsExample())
+  .pipe(SC.Print())
   .on('finish', () => {
     console.log('End or scraping!');
   // end  

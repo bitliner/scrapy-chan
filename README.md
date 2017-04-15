@@ -17,15 +17,16 @@ They can be combined together to easily build and execute effective scraping.
 ```
 let SC = require('scrapy-chan');
 
-SC.Url('news.ycombinator.com')
-  .pipe( SC.ScrapeSinglePageWithoutAjax() )
-  .pipe( SC.Parse() )
-  .pipe( SC.Print() )
-  .on('end', ()=>{
-    // end  
+SC('news.ycombinator.com')
+  .pipe(SC.DownloadPageWithoutJs())
+  .pipe(SC.ParseHackerNewsExample())
+  .pipe(SC.Print())
+  .on('finish', () => {
+    console.log('End or scraping!');
+  // end  
   })
-  .on('error', (err)=>{
-    // err
+  .on('error', (err) => {
+    console.log('Ooooops', err);
   });
 ```
 
@@ -33,7 +34,7 @@ SC.Url('news.ycombinator.com')
 ```
 let SC = require('scrapy-chan');
 
-SC.Url('news.ycombinator.com')
+SC('news.ycombinator.com')
   .pipe( SC.ScrapeSinglePageDistributely() ) // send url and receives Html
   .pipe( SC.Parse() )
   .pipe( SC.Print() )
@@ -47,41 +48,27 @@ SC.Url('news.ycombinator.com')
 
 # Utilities
 
-* [`Url`](#url)
-* [`DownloadPageWithoutJs`](#downloadpagewithoutjs)
+Each utility is a stream.
+
+* [`DownloadPageWithoutJs`](#downloadpagewithoutjs) 
 * [`ParseHackerNewsExample`](#parsehackernewsexample)
 * [`PrintExample`](#printexample)
 
+
+
 ---
 
-## Url
 
-**Input**
-
-`urls` - a string or an array of URLs - e.g. "http://news.ycombinator.com" or "news.ycombinator.com"
-
-**Output**
-
-`url` - a string representing an URL - e.g. "http://news.ycombinator.com"
-
-
-**Example**
-
-```
-Scraps.Url('news.ycombinator.com')
-  .pipe( // this stream will receives 'http://news.ycombinator.com' as input )
-```
----
 
 ## DownloadPageWithoutJs
 
-**Input**
+**Stream Input**
 
-`conf` - a string representing an URL - e.g. "http://news.ycombinator.com"
+`conf: any` - a string representing an URL - e.g. "http://news.ycombinator.com"
 
-**Output**
+**Stream Output**
 
-`url` - a string representing an URL - e.g. "http://news.ycombinator.com"
+`url: String` - a string representing an URL - e.g. "http://news.ycombinator.com"
 
 
 ```
@@ -92,14 +79,14 @@ SC.Url('news.ycombinator.com')
 
 ## ParseHackerNewsExample
 
-**Input**
+**Stream Input**
 
-`html` - a string representing an html page
+`html: String` - a string representing an html page
 
 ---
 
 ## PrintExample
 
-**Input**
+**Stream Input**
 
-`objects` - an array of objects, where each object have a *title* and *link* fields
+`Array` - an array of objects, where each object have a *title* and *link* fields

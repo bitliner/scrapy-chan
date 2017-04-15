@@ -1,14 +1,21 @@
 'use strict';
 
-module.exports.Url = require('./lib/Url');
 
-module.exports.DownloadPageWithoutJs = require('./lib/DownloadPageWithoutJs');
+let ScrapyChan = function(urls) {
+  return require('./lib/Url')(urls);
+};
+
+Object.assign(ScrapyChan, {
+  DownloadPageWithoutJs: require('./lib/DownloadPageWithoutJs'),
+  ParseHackerNewsExample: require('./lib/ParseHackerNewsExample'),
+  Print: require('./lib/Print'),
+  DownloadPageWithoutJsDistributely: require('./lib/distributed/client/DownloadPageWithoutJsDistributely'),
+  _stream: require('./lib/utils/stream'),
+});
 
 
-module.exports.ParseHackerNewsExample = require('./lib/ParseHackerNewsExample');
 
-module.exports.Print = require('./lib/Print');
 
-module.exports._stream = require('./lib/utils/stream');
 
-module.exports.DownloadPageWithoutJsDistributely = require('./lib/distributed/client/DownloadPageWithoutJsDistributely');
+module.exports = ScrapyChan;
+

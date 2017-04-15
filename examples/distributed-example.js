@@ -4,7 +4,7 @@ const async = require('async');
 let urls = ['news.ycombinator.com', 'news.ycombinator.com'];
 
 async.each(urls, (url, done) => {
-  SC.Url(url)
+  SC(url)
     .pipe(SC.DownloadPageWithoutJsDistributely({
       host: '192.168.99.100',
       port: '6379',
@@ -17,6 +17,7 @@ async.each(urls, (url, done) => {
     .on('error', (err) => {
       done(err);
     });
+
 }, (err) => {
   if (err) {
     return console.log('Error', err);
