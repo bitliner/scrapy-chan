@@ -52,6 +52,8 @@ SC.Url('news.ycombinator.com')
 * [`ParseHackerNewsExample`](#parsehackernewsexample)
 * [`PrintExample`](#printexample)
 
+---
+
 ## Url
 
 **Input**
@@ -92,7 +94,7 @@ SC.Url('news.ycombinator.com')
 
 **Input**
 
-* `html` - a string representing an html page
+`html` - a string representing an html page
 
 ---
 
@@ -100,4 +102,4 @@ SC.Url('news.ycombinator.com')
 
 **Input**
 
-* `objects` - an array of objects, where each object have a *title* and *link* fields
+`objects` - an array of objects, where each object have a *title* and *link* fields
