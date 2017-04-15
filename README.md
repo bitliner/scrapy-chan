@@ -47,4 +47,12 @@ SC.Url('news.ycombinator.com')
 
 # Utilities
 
-TBD
+## List
+
+* [`DownloadPageWithoutJs`](#DownloadPageWithoutJs)
+
+## DownloadPageWithoutJs (conf, encoding, done)
+
+**Input**
+
+* `conf` - a string representing an URL - e.g. "http://news.ycombinator.com"
