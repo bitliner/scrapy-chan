@@ -47,10 +47,10 @@ SC.Url('news.ycombinator.com')
 
 # Utilities
 
-* [`Url`](#Url)
-* [`DownloadPageWithoutJs`](#DownloadPageWithoutJs)
-* [`ParseHackerNewsExample`](#ParseHackerNewsExample)
-* [`PrintExample`](#PrintExample)
+* [`Url`](#url)
+* [`DownloadPageWithoutJs`](#downloadpagewithoutjs)
+* [`ParseHackerNewsExample`](#parsehackernewsexample)
+* [`PrintExample`](#printexample)
 
 ## Url
 
