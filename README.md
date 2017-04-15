@@ -51,7 +51,8 @@ SC.Url('news.ycombinator.com')
 
 * [`DownloadPageWithoutJs`](#DownloadPageWithoutJs)
 
-## DownloadPageWithoutJs (conf, encoding, done)
+
+## DownloadPageWithoutJs
 
 **Input**
 
