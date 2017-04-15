@@ -6,13 +6,19 @@ Scraping made easy.
 
 They can be combined together to easily build and execute effective scraping.
 
+# Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Utilities](#utilities)
+
+
 # Installation
 
 `npm i --save scrapy-chan`
 
 # Usage
 
-**Single process**
+**Single instance**
 
 ```
 let SC = require('scrapy-chan');
