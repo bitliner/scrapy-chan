@@ -4,7 +4,7 @@ let SC = require('../');
 SC('news.ycombinator.com')
   .pipe(SC.DownloadPageWithoutJs())
   .pipe(SC.ParseHackerNewsExample())
-  .pipe(SC.Print())
+  .pipe(SC.PrintHackerNewsExample())
   .on('finish', () => {
     console.log('End or scraping!');
   // end  

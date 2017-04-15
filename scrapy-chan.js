@@ -8,7 +8,7 @@ let ScrapyChan = function(urls) {
 Object.assign(ScrapyChan, {
   DownloadPageWithoutJs: require('./lib/DownloadPageWithoutJs'),
   ParseHackerNewsExample: require('./lib/ParseHackerNewsExample'),
-  Print: require('./lib/Print'),
+  PrintHackerNewsExample: require('./lib/PrintHackerNewsExample'),
   DownloadPageWithoutJsDistributely: require('./lib/distributed/client/DownloadPageWithoutJsDistributely'),
   _stream: require('./lib/utils/stream'),
 });

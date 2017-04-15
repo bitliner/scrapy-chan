@@ -10,7 +10,7 @@ async.each(urls, (url, done) => {
       port: '6379',
     })) // send url and receives Html
     .pipe(SC.ParseHackerNewsExample())
-    .pipe(SC.Print())
+    .pipe(SC.PrintHackerNewsExample())
     .on('end', () => {
       done()
     })
