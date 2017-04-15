@@ -69,6 +69,7 @@ SC.Url('news.ycombinator.com')
 Scraps.Url('news.ycombinator.com')
   .pipe( // this stream will receives 'http://news.ycombinator.com' as input )
 ```
+---
 
 ## DownloadPageWithoutJs
 
@@ -92,6 +93,8 @@ SC.Url('news.ycombinator.com')
 **Input**
 
 * `html` - a string representing an html page
+
+---
 
 ## PrintExample
 
