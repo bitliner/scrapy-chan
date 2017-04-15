@@ -56,7 +56,12 @@ SC.Url('news.ycombinator.com')
 
 **Input**
 
-* `urls` - a string or an array of URLs
+`urls` - a string or an array of URLs - e.g. "http://news.ycombinator.com" or "news.ycombinator.com"
+
+**Output**
+
+`url` - a string representing an URL - e.g. "http://news.ycombinator.com"
+
 
 **Example**
 
@@ -69,7 +74,18 @@ Scraps.Url('news.ycombinator.com')
 
 **Input**
 
-* `conf` - a string representing an URL - e.g. "http://news.ycombinator.com"
+`conf` - a string representing an URL - e.g. "http://news.ycombinator.com"
+
+**Output**
+
+`url` - a string representing an URL - e.g. "http://news.ycombinator.com"
+
+
+```
+SC.Url('news.ycombinator.com')
+  .pipe( SC.DownloadPageWithoutJs() )
+  .pipe( // this stream will )
+```
 
 ## ParseHackerNewsExample
 
