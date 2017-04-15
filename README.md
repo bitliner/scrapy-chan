@@ -58,6 +58,13 @@ SC.Url('news.ycombinator.com')
 
 * `urls` - a string or an array of URLs
 
+**Example**
+
+```
+Scraps.Url('news.ycombinator.com')
+  .pipe( // this stream will receives 'http://news.ycombinator.com' as input )
+```
+
 ## DownloadPageWithoutJs
 
 **Input**
