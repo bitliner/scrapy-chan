@@ -1,4 +1,4 @@
-# scrapy-chan
+# ScrapyChan
 
 Scraping made easy.
 
