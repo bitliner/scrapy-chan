@@ -1,8 +1,10 @@
+<img src="docs/logo.png">
+
+> A Node.JS toolkit for scraping.
+
 # ScrapyChan
 
-Scraping made easy.
-
-`scrapy-chan` offers highly modular `utilities` for doing scraping. 
+`scrapy-chan` offers highly modular `utilities` for scraping. 
 
 They can be easily combined together to build and execute effective scraping.
 
