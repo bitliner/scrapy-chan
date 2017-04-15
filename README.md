@@ -47,10 +47,14 @@ SC.Url('news.ycombinator.com')
 
 # Utilities
 
-## List
-
+* [`Url`](#Url)
 * [`DownloadPageWithoutJs`](#DownloadPageWithoutJs)
 
+## Url
+
+**Input**
+
+* `urls` - a string or an array of URLs
 
 ## DownloadPageWithoutJs
 
