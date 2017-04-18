@@ -2,6 +2,7 @@
 
 > A Node.JS toolkit for scraping.
 
+
 # Scrapy Chan
 
 `scrapy-chan` offers highly modular `utilities` for scraping. 
